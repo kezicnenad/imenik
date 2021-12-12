@@ -11,6 +11,10 @@ export default class App extends React.Component {
     ]
   }
 
+  handleUrediKontakt = (kontakt) => {
+    this.setState({kontakti: [...this.state.kontakti, kontakt]})
+  }
+
   handleUkloniKontakt = (index) => {
     const {kontakti} = this.state;
 
@@ -31,7 +35,7 @@ export default class App extends React.Component {
     return (
       <div className="row">
         <h1 className="naslov">Kontakti</h1>
-        <Contacts contacts={kontakti} removeContact={this.handleUkloniKontakt} />
+        <Contacts contacts={kontakti} editContact={this.handleUrediKontakt} removeContact={this.handleUkloniKontakt} />
         <h1 className="naslov">Dodaj novi kontakt</h1>
         <AddContact handlePrihvatiKontakt={this.handlePrihvatiKontakt} />
       </div>

@@ -13,6 +13,14 @@ th{
     text-align: left !important;
     padding: 3px;
 }
+.kontakt{
+}
+.kontakt > p{
+    border-radius: 5px;
+    margin: 0px 0px 0px 5px;
+    padding: 10px;
+    font-size: 1.2em;
+}
 .fa.fa-pencil,
 .fa.fa-trash{
     font-size: 2em;
@@ -41,10 +49,8 @@ input{
     background-color: #fff;
     border-radius: 5px;
     border: none;
-    height: 100%;
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    height: 40px;
+    width: 40px;
 }
 #ime, #prezime, #adresa, #mail, #mobitel{
     margin-top: 5px;
