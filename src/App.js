@@ -1,44 +1,26 @@
-import React from 'react';
-import Contacts from './components/contacts/Contacts';
-import AddContact from './components/contacts/AddContact';
+import React, {useState} from 'react';
+import { contactsDB as contactList } from './components/ContactsDB';
+import ContactList from './components/ContactList';
+import Brojac from './components/Brojac';
 import './App.css';
-import { findAllInRenderedTree } from 'react-dom/cjs/react-dom-test-utils.production.min';
 
-export default class App extends React.Component {
+export default function App() {
+  const [contacts, setContacts] = useState(contactList);
 
-  state = {
-    kontakti: [
-    ]
+  /* Ovaj (id) dobija onaj id kontakta iz kontakt liste te sa njim hendla */
+  const handleRemoveContact = (id) => {
+    const filteredContacts = contacts.filter(contact => contact.id !== id)
+    setContacts(filteredContacts);
   }
 
-  handleUrediKontakt = (kontakt) => {
-    this.setState({kontakti: [...this.state.kontakti, kontakt]})
-  }
-
-  handleUkloniKontakt = (index) => {
-    const {kontakti} = this.state;
-
-    this.setState({
-      kontakti: kontakti.filter((kontakt, i) => {
-        return i !== index;
-      })
-    });
-  }
-
-  handlePrihvatiKontakt = (kontakt) => {
-    this.setState({kontakti: [...this.state.kontakti, kontakt]})
-  }
-
-  render() {
-    const {kontakti} = this.state;
-
-    return (
-      <div className="row">
-        <h1 className="naslov">Kontakti</h1>
-        <Contacts contacts={kontakti} editContact={this.handleUrediKontakt} removeContact={this.handleUkloniKontakt} />
-        <h1 className="naslov">Dodaj novi kontakt</h1>
-        <AddContact handlePrihvatiKontakt={this.handlePrihvatiKontakt} />
-      </div>
-    )
-  }
+  return(
+    <div className='container'>
+      <h1 className='naslov'>Brojač (REDUX)</h1>
+        <Brojac />
+      <h1 className='naslov'>Kontakti</h1>
+        <ContactList contacts={contacts} 
+        removeContact={handleRemoveContact}
+        />
+    </div>
+  );
 }

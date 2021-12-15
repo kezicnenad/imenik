@@ -1,95 +1,24 @@
 body{
-    font-size: 14px !important;
-    font-weight: 100 !important;
-    margin: 0px 120px;
     background-color: #eee;
+    font-size: 16px;
 }
-h1{
-    font-weight: 100 !important;
-}
-th{
-    font-size: .7em !important;
-    font-weight: 300 !important;
-    text-align: left !important;
-    padding: 3px;
-}
-.kontakt{
-}
-.kontakt > p{
-    border-radius: 5px;
-    margin: 0px 0px 0px 5px;
-    padding: 10px;
-    font-size: 1.2em;
-}
-.fa.fa-pencil,
-.fa.fa-trash{
-    font-size: 2em;
-    transition: .4s;
-}
-.fa.fa-pencil:hover,
-.fa.fa-trash:hover{
-    color: red;
-    transition: .4s;
-}
-.tipka{
-    transition: .4s;
-}
-.tipka:hover{
-    transform: scale(1.2);
-    transition: .4s;
+p{
+    font-size: .6em;
 }
 input{
+    background-color: #fff;
     border: none;
-    border-radius: 5px;
-    padding: 10px;
-    color: #666;
+    font-size: .6em;
     width: 100%;
-}
-.input{
-    background-color: #fff;
     border-radius: 5px;
+}
+button{
     border: none;
-    height: 40px;
-    width: 40px;
-}
-#ime, #prezime, #adresa, #mail, #mobitel{
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-.button{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #fff;
-    color: #666;
-    transition: .4s;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
-}
-.button:disabled{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
-    color: #fff;
-    background-color: #efefef;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-}
-.button:hover{
-    transform: scale(1.1);
-    transition: .2s;
-    color: #000;
-}
-.button:disabled:hover{
-    color: #fff;
-    transform: scale(1);
-    transition: .4s;
 }
 .container{
-    padding: 80px 80px;
-    background-color: #fff;
-}
-.row{
+    padding: 30px 0px;
 }
 .naslov{
-    color: red;
-    padding: 60px 0px 20px 0px;
+    padding-bottom: 30px;
+    padding-top: 30px;
 }
